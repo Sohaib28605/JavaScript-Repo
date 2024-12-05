@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<link rel="icon" data-savepage-href="https://shimmering-choux-aa8654.netlify.app/favicon.ico" href="">
+<title>Js History</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<style data-savepage-href="images/style.css" type="text/css">/* 
+Blue blog template 
+----------------------
+You are free to use
+this template in any
+way you desire, no
+author information or
+link back are required.
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #337FC6 /*savepage-url=bg.gif*/ var(--savepage-url-2) top center repeat-y;
+	font: normal 8pt/13pt verdana, arial,sans-serif;
+	color: #808080;
+}
+
+a, a:visited {
+	text-decoration: underline;
+	color: #000;
+	
+}
+
+a:hover {
+	color: #808080;
+}
+
+#header {
+	width: 562px;
+	height: 60px;
+	background: #000 /*savepage-url=header.gif*/ var(--savepage-url-4) no-repeat;
+	padding-top: 30px;
+	padding-left: 18px;
+	font-size: 14pt;
+	color: #FFF;
+}
+
+#header h2{
+	padding-top: 5px;
+	font-size: 9pt;
+	color: #C2D9EF;	
+}
+
+#container {
+	width: 580px;
+	background: #fff /*savepage-url=sidebar.gif*/ var(--savepage-url-3) repeat-y right;
+	border: solid 10px #fff;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#horizontal {
+	width: 560px;
+	height: 30px;
+	background: /*savepage-url=horizontal.gif*/ url();
+	font-weight: bold;
+	font-size: 8pt;
+	padding-top: 6px;
+	padding-left: 20px;
+	
+}
+
+#horizontal a, #horizontal a:visited {
+	color: #C2D9EF;
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+#horizontal a:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#right-column {
+	color: #808080;
+	width: 134px;
+	background: /*savepage-url=menutop.gif*/ url() no-repeat top left;
+	float: right;
+	padding: 10px;
+	border-right: 4px solid #FFF;
+}
+
+#content {
+	float: left;
+	width: 410px;
+	margin: 10px 0 0 4px;
+}
+
+#content h2{
+	font-size: 12pt;
+	font-weight: bold;
+	color: #76A7DC;
+	margin-bottom: 5px;
+	padding-left: 14px;
+	background: /*savepage-url=h2bg.gif*/ var(--savepage-url-5) top left repeat-y;
+}
+
+.black {
+	color: #000;
+}
+
+p {
+margin-bottom: 20px;
+padding-left: 14px;
+background: /*savepage-url=articlebg.gif*/ var(--savepage-url-6) top left repeat-y;
+}
+
+input.text {
+	width: 70px;	
+	border: 1px solid #ccc;
+}
+
+input.button {
+	color: #808080;
+	padding-left: 0px;
+	font-size: 8pt;	
+	border: none;
+	background: none;
+	}
+
+#searchbox {
+	background: /*savepage-url=searchbox.gif*/ url() no-repeat;
+	padding: 5px;
+	height: 30px;
+}
+
+#footer {
+	color: #1b1a1a;
+	background: #F9F9F9;
+	clear: both;
+	width: 405px;
+	margin-left: 4px;
+	height: 20px;
+	padding: 4px;
+	border: 1px solid #E4E4E4;
+}
+
+#footer a, #footer a:visited{
+	color: #ccc;
+}
+
+#footer a:hover {
+	color: #808080;
+}</style>
+<script data-savepage-type="" type="text/plain" data-savepage-src="app.js"></script>
+
+<style id="savepage-cssvariables">
+  :root {
+    --savepage-url-2: url(data:image/gif;base64,R0lGODlheAIFALMAADBnlzBpmi90ry91sS98vC96uzBuozBvpS9/wy+BxliW0luf4l6n7F+p8P///wAAACwAAAAAeAIFAAAIrwATCBTYYGCCBggIDDgQwIHDhxAjSpxIsaLFixgzatzIsaPHjyBDihxJsqTJkyhTqlzJsqXLiAEODCCAoOBAmwZz4kzAoIAAAwBeCh1KtKjRo0iTKl3KtKnTjwAMCCjAwODOnFYHIljwM+jTr2DDih1LtqzZs2gjRhWwAMFNrHAJCkRQQAHQtHjz6t3Lt6/fvySjKijg9mDcwwUTLmwIuLHjx5AjS578MeZMt1cNBgQAOw==);
+    --savepage-url-3: url(data:image/gif;base64,R0lGODlhoAACAJEAAMzMzP///wAAAAAAACwAAAAAoAACAAAIJwADCBQIoKDBgwgTKlzIsKHDhxAjSpwYcaDFgRQzatzIsaPHhhcDAgA7);
+    --savepage-url-4: url(data:image/gif;base64,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N0zrYs/62LU2drKRrexmM/vZy462s6UN7WlvesJ8Pu5ZoTiCClTgAuAOt7jHTe5we7sCEDCAutfN7nYb4NzfLre8503vetu73vCuQAPcze92QyDf9w64wAdO8IHn+9zp7rfCF85wfx/83AWPuMQnTvGKW/ziGM+4xuXt7RH0eZ9/bvAIHOH/CBI84xkmR/nJU87ylbvcERdwxCMgIAhB0NzmNb+5zhPxiJir/OctB7rLhU70oBt96EcvOslj/ogK5PzpOI+6zgXxCAws3RFFR7rWs871pHt961/v+jNgvvRHNB3qU5c62teu9rbr3OxWJzvMwU53sds97Hive97vrve+8/3vew+83wUP+MEjneQe1zaDuX3yEkADGo6H/OMjT/nJT37ljnA72zOAdRJYXvKgr3zoPy/60pP+9KNPfeRTznlFpP31UOf8z02vetTT/va2z33td0/7ljsiA4nQvPBhP3yoa+ARv0e67nHP++U7v/nQZ770nz/96FP/+tbPfvW3j/3S/p888X52IoRGQAISlOD86E+/+tdfgvJnQAMQiL/8509/DWSg/OzPv/73z//+77/87pcB9DeABGh/94d//peACriADOh/AAiAGfB+BDiBFFiBFBiBB/iA5teAHNiBHviBIBiCIjiCJFiCClh+HqdEICd+7TACzdAMJ+AMzhCDMyiDNHiDNiiDJdAMiZAB/aMBPxiEgQCEQ1gIibCDMJiDNbiEOMiEStiEUPiEUuiEVIiEJZAIhUCEWiiEWxgIV9gMSBiFVCiGZDiFZTiGZpiGY/iCVghhXfiGXBiHQyiHb3gIR8iGeIiGeniGfKiGfbiHfhiIgDiIf1iIgmiIhHiI/4qYiIx4gy+YguHnPS14DMeAAszADJaIiZeYiZy4icxwDCZwDIugARhCin1giqhYiosAisegia7Yia/oibE4i7BYi7Joi69IiaG4CB1Qir54ir+IioWwCKEIird4jLSIjLi4jMrYjMn4jCigi7q4CIuQAcF4jcCYjamojdiIioNwCCWwisUYitDojMxYjuh4jupojuyYju24ju4Yj/A4j+9Yj/L4jpQIiSsoiSOAAieQAgAZkAI5kAKJAgZpAhGQkAq5kAwZASdgkChAkBI5kRRZkRZ5kQAJkSeAkA3ZkQxpAibgjwaJkSRZkiZ5khYJkRBpAh7gkS75kjDJkB0A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);
+    --savepage-url-5: url(data:image/gif;base64,R0lGODlhCQAFALMAAFiW0luf4l6n7IbA97TY+tHp/+j0//X6/////wAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAACQAFAAAIGgAPIBiIYABBBAYOCjhY4GCAgwQOAjhokGBAADs=);
+    --savepage-url-6: url(data:image/gif;base64,R0lGODlhCQAFAKIAAK2trcfHx9vb2+3t7fX19f///wAAAAAAACwAAAAACQAFAAAIGgAJFBhYIADBAgMOGiSYkCCAgwIOPiQYkWBAADs=);
+  }
+</style>
+<script id="savepage-shadowloader" type="text/javascript">
+  "use strict";
+  window.addEventListener("DOMContentLoaded",
+  function(event) {
+    savepage_ShadowLoader(5);
+  },false);
+  function savepage_ShadowLoader(c){createShadowDOMs(0,document.documentElement);function createShadowDOMs(a,b){var i;if(b.localName=="iframe"||b.localName=="frame"){if(a<c){try{if(b.contentDocument.documentElement!=null){createShadowDOMs(a+1,b.contentDocument.documentElement)}}catch(e){}}}else{if(b.children.length>=1&&b.children[0].localName=="template"&&b.children[0].hasAttribute("data-savepage-shadowroot")){b.attachShadow({mode:"open"}).appendChild(b.children[0].content);b.removeChild(b.children[0]);for(i=0;i<b.shadowRoot.children.length;i++)if(b.shadowRoot.children[i]!=null)createShadowDOMs(a,b.shadowRoot.children[i])}for(i=0;i<b.children.length;i++)if(b.children[i]!=null)createShadowDOMs(a,b.children[i])}}}
+</script>
+<meta name="savepage-url" content="https://shimmering-choux-aa8654.netlify.app/">
+<meta name="savepage-title" content="Js History">
+<meta name="savepage-pubdate" content="Unknown">
+<meta name="savepage-from" content="https://shimmering-choux-aa8654.netlify.app/">
+<meta name="savepage-date" content="Fri Dec 06 2024 00:50:24 GMT+0500 (Pakistan Standard Time)">
+<meta name="savepage-state" content="Standard Items; Retain cross-origin frames; Merge CSS images; Remove unsaved URLs; Load lazy images in existing content; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;">
+<meta name="savepage-version" content="33.9">
+<meta name="savepage-comments" content="">
+  </head>
+<body>
+
+<div id="container">
+  <div id="header"> Javascript blog by sohaib <b></b>
+    <h2>Javascript History blog </h2>
+  </div>
+  
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "aa5934d9-a851-4476-9942-93cc46573e7b",
+        apiHost: "https://drtcyx8f.rpcld.app",
+    })
+</script>
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "aa5934d9-a851-4476-9942-93cc46573e7b",
+        apiHost: "https://drtcyx8f.rpcld.app",
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#3B81F6',
+                right: 20,
+                bottom: 20,
+                size: 48,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Hi There👋!, What do you want to learn about javascript?',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            disclaimer: {
+                title: 'Disclaimer',
+                message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+                textColor: 'black',
+                buttonColor: '#3b82f6',
+                buttonText: 'Start Chatting',
+                buttonTextColor: 'white',
+                blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backgroundColor: 'white'
+            },
+            customCSS: ``,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'Flowise Bot',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hello! This is custom welcome message',
+                errorMessage: 'This is a custom error message',
+                backgroundColor: 'white',
+                backgroundImage: 'enter image path or link',
+                height: 700,
+                width: 400,
+                fontSize: 16,
+                starterPrompts: [
+                    "What is the History of JavaScript?",
+                    "What is the Ranking of Jva Script?"
+                ],
+                starterPromptFontSize: 20,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                },
+                userMessage: {
+                    backgroundColor: '#3B81F6',
+                    textColor: '#ffffff',
+                    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+                feedback: {
+                    color: '#303235'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+                footer: {
+                    textColor: 'blue',
+                    text: 'Powered by :',
+                    company: 'Muhammad Sohaib Imran'
+                }
+            }
+        }
+    })
+</script>
+
+  <div id="content">
+    <h2>Javascript<span class="black">History</span></h2>
+    <p> The history of Javascript is as follows :
+
+      1995: JavaScript was created by Brendan Eich while he worked at Netscape. Initially, it was developed in just 10 days and was called Mocha, then renamed to LiveScript, and finally to JavaScript.
+      
+      1996: JavaScript became widely popular when Netscape added it to their web browser, Netscape Navigator 2. Microsoft developed a similar language called JScript for their Internet Explorer.
+      
+      1997: JavaScript was standardized by a group called ECMA International. The standard was called ECMAScript, and it made sure all web browsers handled JavaScript similarly.
+      
+      1999: ECMAScript 3 was released, making JavaScript more powerful and reliable for developers.
+      
+      2005: AJAX (Asynchronous JavaScript and XML) became popular, letting web pages update without reloading, improving user experience and leading to more interactive websites.
+      
+      2009: Node.js was introduced, allowing JavaScript to run outside browsers, making it possible to use it for server-side programming.
+      
+      2015: ECMAScript 6 (also known as ES6) was released, bringing major improvements like classes, modules, and other features, making JavaScript more modern and developer-friendly.
+      
+      2016-Present: JavaScript continues to evolve with regular updates, making it the most widely-used language for web development and a key tool for building interactive websites and web apps. </p>
+    <h2>JavaScript<span class="black"> And modern world</span> </h2>
+    <p>JavaScript has grown from a simple scripting language for web browsers into one of the most powerful and widely-used programming languages in the world. It powers interactive and dynamic content on websites, server-side applications with Node.js, and even mobile apps. With a constantly evolving ecosystem, a strong community, and frameworks like React, Angular, and Vue.js, JavaScript continues to be at the forefront of web development. Its flexibility, ease of learning, and ability to work seamlessly across platforms make it an essential skill for any modern developer</p>
+   <h2>JavaScript <span class="black"> Ranking</span></h2>
+   <p>JavaScript consistently ranks as  in the Top 10 most popular programming languages, consistently sitting at No.1 or No.2
+    According to various surveys like Stack Overflow, it remains the top choice for web development.
+    Usage:
+    
+    69.5% of developers worldwide reported using JavaScript in their work.
+    
+    Primarily used to make web pages interactive and dynamic.
+    Used in front-end frameworks like React, Angular, and Vue.js.
+    Widely used for back-end development with Node.js.
+    
+    Supports building mobile apps, games, and desktop applications.
+    
+    Plays a role in full-stack development, allowing developers to use the same language across front-end and back-end.</p>
+    <h2>JavaScript <span class="black"> Demand</span></h2>
+   <p>JavaScript is in high demand due to its versatility across multiple areas in tech. It’s essential for front-end web development, allowing developers to create interactive user interfaces, while frameworks like React, Angular, and Vue.js enhance its capabilities. With Node.js, JavaScript is also widely used for back-end development, enabling full-stack development with a single language, which is especially valuable for startups and small teams. Additionally, JavaScript is used for mobile app development through frameworks like React Native, data visualization with libraries like D3.js, and even game development. Its vast ecosystem, growing community, and adaptability ensure JavaScript’s continued relevance in the tech industry.</p>
+  </div>
+  <div id="footer">  Designed by Sohaib Imran  </div>
+  <p>you can know more about JavaScript <a href="https://www.javatpoint.com/javascript-tutorial">JavaScript</a></p>
+</div>
+
+
+</body></html>
